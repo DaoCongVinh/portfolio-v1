@@ -1,0 +1,66 @@
+---
+title: "Getting Started with Next.js 15"
+description: "Learn how to build modern web applications with Next.js 15 and the new App Router."
+date: "2024-01-15"
+author: "Your Name"
+tags: ["Next.js", "React", "Web Development"]
+---
+
+# Getting Started with Next.js 15
+
+Next.js 15 brings exciting new features and improvements to the React framework. In this post, we'll explore the key features and how to get started.
+
+## What's New in Next.js 15?
+
+Next.js 15 introduces several improvements:
+
+- **App Router**: The new file-based routing system
+- **Server Components**: Default server-side rendering for better performance
+- **Improved TypeScript support**: Better type inference and error messages
+- **Turbopack**: Faster build times with the new bundler
+
+## Getting Started
+
+To create a new Next.js 15 project, run:
+
+```bash
+npx create-next-app@latest my-app
+```
+
+This will set up a new Next.js project with all the latest features.
+
+## Key Concepts
+
+### Server Components
+
+Server Components are the default in Next.js 15. They run on the server and send only the necessary HTML to the client:
+
+```jsx
+// This is a Server Component by default
+export default function Page() {
+  return <div>Hello from the server!</div>
+}
+```
+
+### Client Components
+
+For interactive components that need client-side JavaScript, use the `"use client"` directive:
+
+```jsx
+"use client"
+
+import { useState } from 'react'
+
+export default function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+```
+
+## Conclusion
+
+Next.js 15 is a powerful framework that makes building modern web applications easier than ever. Give it a try in your next project!
+
+---
+
+*Happy coding!* 🚀
